@@ -22,17 +22,6 @@ A solução foi projetada para fluxos de trabalho que exigem atualizações freq
 
 A ferramenta utiliza um sistema de identificação interna baseado em metadados das composições (campo `Comment`), evitando dependência direta de nomes visíveis.
 
-### Estratégia de Identificação
-
-Cada elemento relevante do projeto é associado a um identificador único persistente.  
-Isso permite que o script:
-
-- localize corretamente os elementos mesmo após renomeações
-- mantenha consistência entre execuções sucessivas
-- evite falhas comuns em workflows baseados em nomes dinâmicos
-
-Essa abordagem aumenta a robustez do projeto e reduz riscos de inconsistência.
-
 ## Fluxo de Uso
 
 1. Executar o script dentro do After Effects  
