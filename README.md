@@ -4,7 +4,7 @@
 
 ## Download 
 
-[Wiser Rank System](../../releases)
+[Wiser Rank System v1.5.0 / v1.6.0](../../releases)
 
 ## Visão Geral
 
