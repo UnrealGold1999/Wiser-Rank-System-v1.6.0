@@ -1,5 +1,11 @@
 # Wiser-Rank-System-v1.6.0
 
+## 🚀 Releases
+
+You can download the latest version of the script here:
+
+👉 [Download Latest Release](../../releases)
+
 <img width="377" height="800" alt="01" src="https://github.com/user-attachments/assets/625b212b-83fe-4cf8-8f91-66f309c20b17" />
 
 ## Visão Geral
@@ -60,9 +66,3 @@ O script irá processar automaticamente todos os elementos vinculados, atualizan
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🚀 Releases
-
-You can download the latest version of the script here:
-
-👉 [Download Latest Release](../../releases)
