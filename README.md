@@ -56,3 +56,7 @@ O script irá processar automaticamente todos os elementos vinculados, atualizan
 - O desempenho e a precisão do script dependem da consistência estrutural do projeto
 - Alterações manuais fora do padrão podem exigir reconfiguração dos identificadores
 - Recomenda-se manter um padrão organizacional para garantir máxima eficiência
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
