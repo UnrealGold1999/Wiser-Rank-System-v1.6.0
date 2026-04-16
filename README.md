@@ -1,6 +1,9 @@
 # Wiser-Rank-System
 
-<img width="377" height="800" alt="01" src="https://github.com/user-attachments/assets/625b212b-83fe-4cf8-8f91-66f309c20b17" />
+<img width="434" height="959" alt="01" src="https://github.com/user-attachments/assets/7c142f01-2930-4881-a4bd-906408d055ad" />
+<img width="552" height="386" alt="02" src="https://github.com/user-attachments/assets/27149fba-8898-4484-97ed-a0acfc8abc68" />
+
+
 
 ## Download
 
