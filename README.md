@@ -1,11 +1,6 @@
 # Wiser-Rank-System
 
-<img width="434" height="959" alt="01" src="https://github.com/user-attachments/assets/7c142f01-2930-4881-a4bd-906408d055ad" />
-<img width="552" height="386" alt="02" src="https://github.com/user-attachments/assets/27149fba-8898-4484-97ed-a0acfc8abc68" />
-<img width="1408" height="768" alt="Gemini_Generated_Image_3drh533drh533drh" src="https://github.com/user-attachments/assets/68b7da47-acf0-4b62-9028-c710163ac052" />
-
-
-
+<img width="1080" height="1080" alt="Untitled-1" src="https://github.com/user-attachments/assets/a466451f-84d0-455f-ac79-6bc6155b2d30" />
 
 ## Download
 
