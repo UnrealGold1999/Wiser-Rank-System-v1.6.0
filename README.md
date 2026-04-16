@@ -36,9 +36,3 @@ A solução foi projetada para fluxos de trabalho que exigem atualizações freq
 - Adobe After Effects
 - Projeto previamente estruturado para suportar automação
 - Elementos com identificação interna configurada
-
-## Proposta
-
-Esta ferramenta transforma um processo manual e repetitivo em um fluxo automatizado, confiável e escalável dentro do After Effects.
-
-Ao abstrair a dependência de nomes visuais e utilizar identificadores persistentes, o sistema permite ciclos rápidos de atualização com alta integridade estrutural.
