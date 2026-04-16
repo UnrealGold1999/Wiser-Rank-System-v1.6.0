@@ -16,12 +16,6 @@ Baixe a versão mais recente ou escolha uma versão específica:
 
 Esta ferramenta fornece uma interface simplificada para entrada de dados e automatiza a aplicação dessas informações em múltiplos elementos do projeto. A solução foi projetada para fluxos de trabalho que exigem atualizações frequentes de listas ordenadas (rankings), permitindo reaplicações rápidas sem comprometer a integridade das referências internas do projeto.
 
-## Requisitos
-
-- Adobe After Effects
-- Projeto previamente estruturado para suportar automação
-- Elementos com identificação interna configurada
-
 ## Principais Funcionalidades
 
 - Interface para entrada estruturada de dados
@@ -64,6 +58,12 @@ O script irá processar automaticamente todos os elementos vinculados, atualizan
 - O desempenho e a precisão do script dependem da consistência estrutural do projeto
 - Alterações manuais fora do padrão podem exigir reconfiguração dos identificadores
 - Recomenda-se manter um padrão organizacional para garantir máxima eficiência
+
+## Requisitos
+
+- Adobe After Effects
+- Projeto previamente estruturado para suportar automação
+- Elementos com identificação interna configurada
 
 ## Licença
 
