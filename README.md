@@ -6,7 +6,7 @@
 
 Download:
 
-Última versão: [v1.6.0](../../releases/tag/v1.6.0)
+[Download v1.6.0](../../releases/tag/Wiser-Rank-System-v1.6.0)
 
 ## Visão Geral
 
