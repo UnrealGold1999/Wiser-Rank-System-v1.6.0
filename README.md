@@ -56,9 +56,3 @@ O script irá processar automaticamente todos os elementos vinculados, atualizan
 - O desempenho e a precisão do script dependem da consistência estrutural do projeto
 - Alterações manuais fora do padrão podem exigir reconfiguração dos identificadores
 - Recomenda-se manter um padrão organizacional para garantir máxima eficiência
-
-## Proposta
-
-Esta ferramenta transforma um processo manual e repetitivo em um fluxo automatizado, confiável e escalável dentro do After Effects.
-
-Ao abstrair a dependência de nomes visuais e utilizar identificadores persistentes, o sistema permite ciclos rápidos de atualização com alta integridade estrutural.
