@@ -2,9 +2,9 @@
 
 <img width="377" height="800" alt="01" src="https://github.com/user-attachments/assets/625b212b-83fe-4cf8-8f91-66f309c20b17" />
 
-## Releases
+## 🚀 Download
 
-[Download:](../../releases/latest)
+👉 [Baixar versão mais recente](../../releases)
 
 ## Visão Geral
 
