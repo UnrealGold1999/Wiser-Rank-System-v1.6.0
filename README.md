@@ -4,7 +4,7 @@
 
 ## Download
 
-[Baixar versão mais recente](../../releases)
+[Wiser-Rank-System-v1.6.0](../../releases)
 
 ## Visão Geral
 
