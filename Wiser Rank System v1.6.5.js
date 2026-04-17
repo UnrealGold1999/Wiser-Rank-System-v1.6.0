@@ -473,6 +473,125 @@
             };
         }
 
+        function prepararDadosImportacao(content) {
+            content = content.replace(/\r/g, "");
+            var linhas = content.split("\n");
+            var separador = "\t";
+            var i;
+            var linhaTeste = "";
+
+            for (i = 0; i < linhas.length; i++) {
+                if (linhas[i].replace(/\s/g, "") !== "") {
+                    linhaTeste = linhas[i];
+                    break;
+                }
+            }
+
+            if (linhaTeste.indexOf("\t") !== -1) separador = "\t";
+            else if (linhaTeste.indexOf(";") !== -1) separador = ";";
+            else if (linhaTeste.indexOf(",") !== -1) separador = ",";
+
+            function clean(v) {
+                if (!v) return "";
+                return v.replace(/^"|"$/g, "").replace(/^\s+|\s+$/g, "");
+            }
+
+            var rows = [];
+            var count = 0;
+
+            for (i = 0; i < linhas.length && count < 20; i++) {
+                if (linhas[i].replace(/\s/g, "") === "") continue;
+
+                var partes = linhas[i].split(separador);
+                rows.push({
+                    linha: count + 1,
+                    nome: clean(partes[0]),
+                    tag: clean(partes[1])
+                });
+                count++;
+            }
+
+            return rows;
+        }
+
+        function mostrarEditorImportacao(rows) {
+            var previewWin = new Window("dialog", "Revisar CSV / TSV");
+            previewWin.orientation = "column";
+            previewWin.alignChildren = ["fill", "top"];
+            previewWin.spacing = 10;
+            previewWin.margins = 15;
+
+            var info = previewWin.add("statictext", undefined, "Edite os dados abaixo antes de importar:");
+            info.alignment = ["left", "top"];
+
+            var listPanel = previewWin.add("panel", undefined, "");
+            listPanel.orientation = "column";
+            listPanel.alignChildren = ["fill", "top"];
+            listPanel.margins = [10, 10, 10, 10];
+            listPanel.spacing = 4;
+
+            var container = listPanel.add("group");
+            container.orientation = "column";
+            container.alignChildren = ["fill", "top"];
+            container.spacing = 4;
+
+            var editRows = [];
+
+            for (var i = 0; i < 20; i++) {
+                var row = container.add("group");
+                row.orientation = "row";
+                row.alignChildren = ["left", "center"];
+                row.spacing = 10;
+
+                var lbl = row.add("statictext", undefined, pad2(i + 1));
+                lbl.preferredSize.width = 32;
+
+                var nome = row.add("edittext", undefined, rows[i] ? rows[i].nome : "");
+                nome.preferredSize.width = 250;
+
+                var tag = row.add("edittext", undefined, rows[i] ? rows[i].tag : "");
+                tag.preferredSize.width = 220;
+
+                editRows.push({
+                    nome: nome,
+                    tag: tag
+                });
+            }
+
+            var info2 = previewWin.add("statictext", undefined, "Você pode ajustar qualquer linha antes de confirmar.");
+            info2.alignment = ["left", "top"];
+
+            var btnGroup = previewWin.add("group");
+            btnGroup.orientation = "row";
+            btnGroup.alignment = ["right", "top"];
+
+            var cancelarBtn = btnGroup.add("button", undefined, "Cancelar", {name: "cancel"});
+            var confirmarBtn = btnGroup.add("button", undefined, "Confirmar Importação", {name: "ok"});
+
+            var resultado = null;
+
+            confirmarBtn.onClick = function () {
+                resultado = [];
+                for (var i = 0; i < editRows.length; i++) {
+                    resultado.push({
+                        linha: i + 1,
+                        nome: editRows[i].nome.text,
+                        tag: editRows[i].tag.text
+                    });
+                }
+                previewWin.close();
+            };
+
+            cancelarBtn.onClick = function () {
+                previewWin.close();
+            };
+
+            previewWin.center();
+            previewWin.show();
+
+            return resultado;
+        }
+
         var applyBtn = win.add("button", undefined, "Aplicar");
         applyBtn.alignment = ["fill", "top"];
         applyBtn.preferredSize.height = 40;
@@ -590,29 +709,24 @@
             var content = file.read();
             file.close();
 
-            content = content.replace(/\r/g, "");
-            var linhas = content.split("\n");
-            if (linhas.length === 0) return;
+            var rows = prepararDadosImportacao(content);
 
-            var separador = "\t";
-            if (linhas[0].indexOf("\t") !== -1) separador = "\t";
-            else if (linhas[0].indexOf(";") !== -1) separador = ";";
-            else if (linhas[0].indexOf(",") !== -1) separador = ",";
-
-            function clean(v) {
-                if (!v) return "";
-                return v.replace(/^"|"$/g, "").replace(/^\s+|\s+$/g, "");
+            if (rows.length === 0) {
+                alert("Nenhum dado válido foi encontrado no arquivo.");
+                return;
             }
 
-            var count = 0;
+            var revisado = mostrarEditorImportacao(rows);
+            if (!revisado) return;
 
-            for (var i = 0; i < linhas.length && count < 20; i++) {
-                if (linhas[i].replace(/\s/g, "") === "") continue;
+            for (var i = 0; i < 20; i++) {
+                inputs[i].nome.text = "";
+                inputs[i].tag.text = "";
+            }
 
-                var partes = linhas[i].split(separador);
-                inputs[count].nome.text = clean(partes[0]);
-                inputs[count].tag.text = clean(partes[1]);
-                count++;
+            for (var j = 0; j < revisado.length && j < 20; j++) {
+                inputs[j].nome.text = revisado[j].nome;
+                inputs[j].tag.text = revisado[j].tag;
             }
 
             win.update();
