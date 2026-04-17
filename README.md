@@ -5,21 +5,21 @@
 Baixe a versão mais recente:
 [Wiser Rank System v1.7.2](../../releases/tag/Wiser-Rank-System-v1.7.2)
 
-## Importante (Configuração do After Effects)
+## ⚠️ Importante (Configuração do After Effects)
 
-Para o funcionamento correto da ferramenta, ajuste as seguintes configurações:
+Para o funcionamento correto do script, ajuste as seguintes configurações:
 
 - Vá em: **Edit > Preferences > Scripting & Expressions**
 
 Configure assim:
 
-- Enable: **Allow Scripts to Write Files and Access Network**
-- Disable: **Warn User When Executing Scripts**
+- ✔️ Enable: **Allow Scripts to Write Files and Access Network**
+- ❌ Disable: **Warn User When Executing Scripts**
 
 Essas configurações são necessárias para:
 
 - Permitir downloads automáticos de imagens
-- Evitar interrupções durante a execução da ferramenta
+- Evitar interrupções durante a execução do script
 - Garantir funcionamento completo das automações
 
 Sem isso, algumas funcionalidades podem não funcionar corretamente ou exigir confirmação manual.
